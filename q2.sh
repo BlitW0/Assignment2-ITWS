@@ -1,7 +1,7 @@
 #!/bin/bash
 
 cnt=0
-ls | while read b
+ls |{ while read b
 do
 	if [ -d $b ]
 	then
@@ -46,5 +46,5 @@ do
 	echo "${dir[$max]}	${fl[$max]}"
 	fl[$max]=-1
 done
-
+}
 
